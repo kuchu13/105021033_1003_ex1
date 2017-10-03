@@ -9,15 +9,18 @@ public class MainFrame extends JFrame {
     private JLabel jlb = new JLabel("Key");
     private JButton jbtn3 = new JButton("清除");
     private JButton jbtn4 = new JButton("Exit");
+
     private JPanel jpnc = new JPanel(new GridLayout(6,1,3,3));
     private JTextArea jtaL = new JTextArea();
     private JTextArea jtaR = new JTextArea();
     private JScrollPane jspL=new JScrollPane(jtaL);
     private JScrollPane jspR=new JScrollPane(jtaR);
     private JTextField jtfKey = new JTextField("3");
+
     public MainFrame() {
         initComp();
     }
+
     private void initComp() {
     this.setBounds(100,100,500,400);
     this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -41,6 +44,7 @@ public class MainFrame extends JFrame {
     jtaR.setPreferredSize(new Dimension( 200,400));
     jtaL.setLineWrap(true);
     jtaR.setLineWrap(true);
+
     jbtn1.addActionListener(new AbstractAction() {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -51,6 +55,7 @@ public class MainFrame extends JFrame {
                 "Remember, if you want to watch this video with English subtitles, ");
         }
     });
+
         jbtn2.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,6 +67,7 @@ public class MainFrame extends JFrame {
             jtaR.setText(new String(data));
             }
         });
+
         jbtn3.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,12 +75,13 @@ public class MainFrame extends JFrame {
                 jtaR.setText(null);
             }
         });
+
         jbtn4.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
-
+        
     }
 }

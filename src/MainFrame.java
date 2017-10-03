@@ -51,7 +51,30 @@ public class MainFrame extends JFrame {
                 "Remember, if you want to watch this video with English subtitles, ");
         }
     });
-
+        jbtn2.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            char data[] =jtaL.getText().toCharArray();
+            int len =data.length,Key =Integer.parseInt(jtfKey.getText());
+            for(int i = 0;i<len; i++){
+                data[i] += Key;
+            }
+            jtaR.setText(new String(data));
+            }
+        });
+        jbtn3.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jtaL.setText(null);
+                jtaR.setText(null);
+            }
+        });
+        jbtn4.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
     }
 }

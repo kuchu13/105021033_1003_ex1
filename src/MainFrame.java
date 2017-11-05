@@ -23,7 +23,9 @@ public class MainFrame extends JFrame {
 
     private void initComp() {
     this.setBounds(100,100,500,400);
-    this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        MainFrame.this.setTitle("凱撒加密器");
+
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     cp=this.getContentPane();
 //    cp.setLayout(new GridLayout(5,1,3,3));
     cp.setLayout(new BorderLayout(3,3));
